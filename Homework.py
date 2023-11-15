@@ -17,14 +17,14 @@ class Student:
       return 'Ошибка'
     # print(lecturer.grades)
   
-  # def av_rate_lec():
-  #   for key, value in lecturer.grades:
-  #     print(value)
-  #   return "ddf"
+    def av_rate_lec():
+      for key, value in lecturer.grades:
+        print(value)
+      return "ddf"
   
-  # def __str__(self):
-  #   Student.av_rate_lec()
-  #   return (f"Имя: {self.name}\nФамилия: {self.surname}")
+    def __str__(self):
+      Student.av_rate_lec()
+      return (f"Имя: {self.name}\nФамилия: {self.surname}")
 
 class Mentor:
   def __init__(self, name, surname):
@@ -33,8 +33,9 @@ class Mentor:
     self.courses_attached = []
   
   def __str__(self):
-    return (f"Имя: {self.name}\nФамилия: {self.surname}")   
-
+        some_student = f"Name: {self.name}\nSurname: {self.surname}\nAverage mark for lecters:{self.__si_grade()}\nCourses that are taught: { ','.join(self.courses_in_progress)}\nCourses studied: { ','.join(self.finished_courses )} "
+        return some_student
+    
 class Lecturer(Mentor):
   grades = {}
       
